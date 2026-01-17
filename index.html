@@ -308,23 +308,23 @@
             </button>
             <button class="sidebar-item" data-page="2">
                 <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                <span>Setup</span>
+                <span>Identity</span>
             </button>
             <button class="sidebar-item" data-page="3">
                 <svg viewBox="0 0 24 24"><path d="M21 8.94a1.31 1.31 0 0 0-.06-.27v-.09a1.07 1.07 0 0 0-.19-.28l-6-6a1.07 1.07 0 0 0-.28-.19h-.09a.88.88 0 0 0-.33-.11H7a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V9v-.06zm-6-3.53L17.59 8H16a1 1 0 0 1-1-1V5.41zM18 19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6v3a3 3 0 0 0 3 3h2v9z"/><path d="M8 12h8M8 16h8"/></svg>
-                <span>zen.inject</span>
+                <span>Inject</span>
             </button>
             <button class="sidebar-item" data-page="4">
                 <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                <span>zen.execute</span>
+                <span>execute</span>
             </button>
             <button class="sidebar-item" data-page="5">
                 <svg viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="9.5" y1="12.5" x2="14.5" y2="17.5"/><line x1="14.5" y1="12.5" x2="9.5" y2="17.5"/></svg>
-                <span>zen.kill</span>
+                <span>kill roblox</span>
             </button>
             <button class="sidebar-item" data-page="6">
                 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                <span>zen.find</span>
+                <span>user agent</span>
             </button>
         </div>
     </div>
@@ -347,46 +347,47 @@
 
             <!-- Page 2: Setup -->
             <div class="page" data-page="2">
-                <h2 class="function-title">Setup</h2>
+                <h2 class="function-title">identity</h2>
                 <p class="function-description">
-                    idk ima ask the developer about this part later
+                   used to make your executor your own! choose the name and version
                 </p>
+                <div class="code-block">API.SetExecutorIdentity("katana", "2.1.0");</div>
             </div>
 
             <!-- Page 3: Inject -->
             <div class="page" data-page="3">
                 <h2 class="function-title">zen.inject</h2>
                 <p class="function-description">
-                    zen.inject injects the exploit into roblox, allowing you to use zen.execute
+                    zen.inject injects the exploit into roblox it requires the tpid of the game client
                 </p>
                 <div class="code-block">zen.inject(TPID)</div>
             </div>
 
             <!-- Page 4: Execute -->
             <div class="page" data-page="4">
-                <h2 class="function-title">zen.execute</h2>
+                <h2 class="function-title">execute</h2>
                 <p class="function-description">
-                    zen.execute is used to run lua scripts into the roblox client, the client MUST be injected into using <a href="#" class="inject-link">zen.inject</a> before executing
+                    used to run lua scripts into the roblox client, the client MUST be injected, replace string with the lua script
                 </p>
-                <div class="code-block">zen.execute(string)</div>
+                <div class="code-block">API.Execute("richtextbox1.text");</div>
             </div>
 
             <!-- Page 5: Kill Roblox -->
             <div class="page" data-page="5">
-                <h2 class="function-title">zen.kill</h2>
+                <h2 class="function-title">kill roblox</h2>
                 <p class="function-description">
                     used to kill the injected roblox client, can be used if the client gets frozen
                 </p>
-                <div class="code-block">zen.kill()</div>
+                <div class="code-block">API.KillRoblox();</div>
             </div>
 
             <!-- Page 6: Find Roblox -->
             <div class="page" data-page="6">
-                <h2 class="function-title">zen.find</h2>
+                <h2 class="function-title">user agent</h2>
                 <p class="function-description">
-                    zen.find is used to find roblox clients and see if they are injected or not, also gets there tpids which can be used for <a href="#" class="inject-link">zen.inject</a>
+                    this makes it so that when you send a request to a website (loadstring for example) the website sees you as "executor name"
                 </p>
-                <div class="code-block">zen.find()</div>
+                <div class="code-block">API.SetUserAgent("katana-Agent/1.0");</div>
             </div>
 
             <div class="navigation">
